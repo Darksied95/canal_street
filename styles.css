@@ -2,6 +2,7 @@
   --clr-blue: #5ea3ec;
   --clr-red: #f64444;
   --clr-orange: #ffb400;
+  --mobile-inline-padding: 28px;
 }
 
 *,
@@ -22,7 +23,23 @@ picture {
   display: block;
 }
 
+@font-face {
+  font-family: 'ogg';
+  src: url('./assets/fonts/Ogg-Roman.otf');
+}
+
+@font-face {
+  font-family: 'Apercu_mono';
+  src: url('/assets/fonts/apercu-mono.ttf');
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('/assets/fonts/Apercu_Regular.otf');
+}
+
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -31,4 +48,59 @@ picture {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+body {
+  padding-top: 400px
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--mobile-inline-padding)
+}
+
+.menu_button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu_button span {
+  display: block;
+  background-color: black;
+  height: 1px;
+  width: 30px;
+}
+
+.hero {
+  padding-inline: var(--mobile-inline-padding);
+}
+
+.hero_text {
+  font-family: ogg, sans-serif;
+  font-size: 35px;
+  line-height: 45px;
+}
+
+section.one {
+  padding-inline: var(--mobile-inline-padding);
+  line-height: 60px;
+}
+
+section.one>h1 {
+  font-size: 60px;
+  font-family: ogg, sans-serif;
+  margin-block: 60px;
+}
+
+section.one .details {
+  font-family: "Apercu_mono";
+  font-size: 14px;
+  line-height: 21px;
+  margin-block: 30px;
 }
