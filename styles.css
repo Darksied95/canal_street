@@ -104,3 +104,21 @@ section.one .details {
   line-height: 21px;
   margin-block: 30px;
 }
+
+section.two {
+  padding-inline: var(--mobile-inline-padding);
+}
+
+.market_events img {
+  margin: auto;
+  width: 120px;
+}
+
+
+section.two h1 {
+  font-size: 60px;
+  font-family: ogg, sans-serif;
+  line-height: 65px;
+  margin-block: 40px;
+  text-align: center;
+}
