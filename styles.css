@@ -52,6 +52,7 @@ picture {
 
 body {}
 
+
 header {
   position: fixed;
   width: 100%;
@@ -78,6 +79,7 @@ header {
 .hero {
   padding-inline: var(--mobile-inline-padding);
   margin-top: 300px;
+  margin-bottom: 50px;
 }
 
 .hero_text {
@@ -112,22 +114,27 @@ header {
   }
 }
 
-section.one {
+.sub_section_one {
   padding-inline: var(--mobile-inline-padding);
   line-height: 60px;
 }
 
-section.one>h1 {
+.sub_section_one>h1 {
   font-size: 60px;
   font-family: ogg, sans-serif;
   margin-block: 60px;
 }
 
-section.one .details {
+.sub_section_one .details {
   font-family: "Apercu_mono";
   font-size: 14px;
   line-height: 21px;
   margin-block: 30px;
+}
+
+.first img {
+  opacity: 0;
+  transition: opacity 1s ease-in;
 }
 
 section.two {
@@ -178,4 +185,9 @@ section.two h1 {
     text-decoration: none;
     color: black;
   }
+}
+
+.visible {
+  opacity: 1 !important;
+
 }
