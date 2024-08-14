@@ -3,6 +3,9 @@
   --clr-red: #f64444;
   --clr-orange: #ffb400;
   --mobile-inline-padding: 28px;
+  --ff-ogg: ogg;
+  --ff-Apercu-mono: "Apercu_mono";
+  --ff-Apercu: "Apercu";
 }
 
 *,
@@ -21,6 +24,22 @@ img,
 picture {
   max-width: 100%;
   display: block;
+}
+
+
+
+.desktop {
+  display: none;
+}
+
+@media (width > 350px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
 
 @font-face {
@@ -49,9 +68,6 @@ picture {
     scroll-behavior: auto !important;
   }
 }
-
-body {}
-
 
 header {
   position: fixed;
@@ -159,6 +175,22 @@ section.two h1 {
   font-family: "Apercu_mono", sans-serif;
   font-size: 16px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.market_events_details:first-of-type {
+  margin-top: 30px;
+}
+
+.market_events_details:last-of-type {
+  margin-bottom: 30px;
+}
+
+.market_events_details>* {
+  min-width: 100%;
 }
 
 .market_events_details a:is(a, :active, :hover, :focus) {
@@ -170,8 +202,16 @@ section.two h1 {
   font-size: 12px;
 }
 
-.market_events_details>p {
-  margin-top: 15px;
+
+.market_events_details:is(:first-of-type, :last-of-type) {
+  background-image:
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 14px, 0 calc(100% - 14px);
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
+  background-size: 24px 1px, 24px 1px, 24px 1px, 24px 1px;
 }
 
 .market_events_button {
@@ -189,5 +229,104 @@ section.two h1 {
 
 .visible {
   opacity: 1 !important;
+}
 
+.address a {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: ogg;
+  display: block;
+  max-width: 80%;
+  padding-inline: 31px;
+  padding-block: 50px;
+  margin: auto;
+  margin-top: 30px;
+  background-image:
+    linear-gradient(90deg, black 50%, transparent 0),
+    linear-gradient(90deg, black 50%, transparent 0),
+    linear-gradient(180deg, black 50%, transparent 0),
+    linear-gradient(180deg, black 50%, transparent 0);
+  background-size: 35px 1px, 35px 1px, 1px 35px, 1px 35px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+}
+
+footer {
+  font-family: var(--ff-ogg);
+  font-weight: bold;
+
+  & a {
+    font-family: 'Apercu_mono';
+  }
+}
+
+.interested {
+  text-align: center;
+  padding: 60px;
+  background-image:
+    repeating-linear-gradient(-74deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 4px),
+    repeating-linear-gradient(-74deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 1px, transparent 0, transparent 4px);
+  background-position: 0 0, 0 100%;
+  background-size: 100% 12px, 100% 12px;
+  background-repeat: repeat-x;
+
+  &>button {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid black;
+    padding-block: 20px;
+    font-size: 1rem;
+  }
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-block: 35px;
+  margin-inline: 30px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  background-image:
+    linear-gradient(90deg, black 50%, transparent 0),
+    linear-gradient(90deg, black 50%, transparent 0),
+    linear-gradient(180deg, black 50%, transparent 0),
+    linear-gradient(180deg, black 50%, transparent 0);
+  background-size: 35px 1px, 35px 1px, 1px 35px, 1px 35px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+}
+
+.contact a:first-child {
+  margin-top: 20px;
+
+}
+
+.footer_end {
+  display: flex;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+  font-family: var(--ff-Apercu);
+  margin-bottom: 4rem;
+}
+
+
+
+.footer_end>* {
+  width: 50%;
+  /* text-decoration: none; */
+  color: black;
+  font-weight: normal !important;
+  font-size: 10px;
+}
+
+
+.footer_end>*:nth-child(2n) {
+  text-align: end;
 }
