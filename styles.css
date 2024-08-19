@@ -8,23 +8,19 @@
   --ff-Apercu: "Apercu";
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 body {
-  min-height: 100vh;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
-img,
-picture {
-  max-width: 100%;
-  display: block;
+body::-webkit-scrollbar {
+  display: none;
 }
+
 
 .desktop {
   display: none !important;
@@ -33,35 +29,6 @@ picture {
 a {
   color: black;
   text-decoration: none;
-}
-
-@font-face {
-  font-family: 'ogg';
-  src: url('./assets/fonts/Ogg-Roman.otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Apercu_mono';
-  src: url('/assets/fonts/apercu-mono.ttf');
-}
-
-@font-face {
-  font-family: 'Apercu';
-  src: url('/assets/fonts/Apercu_Regular.otf');
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 @media (width > 768px) {
@@ -109,6 +76,7 @@ header {
 
 .nav-desktop a:first-child {
   width: 100%;
+  height: 1px;
 }
 
 .nav-desktop a span:nth-child(2) {
@@ -421,6 +389,9 @@ footer {
     animation: m infinite linear .9s;
   }
 
+
+
+
   @keyframes m {
     from {
 
@@ -442,6 +413,7 @@ footer {
 
   .market_events_button {
     grid-column: 2;
+    margin: auto;
     background: white;
     width: 200px;
   }
@@ -454,6 +426,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
+    grid-template-rows: strecth;
   }
 
   .address a {
@@ -461,6 +434,7 @@ footer {
     padding: 90px 30px;
     display: block;
     min-width: 100%;
+    height: 100%
   }
 
   .address a p {
@@ -469,4 +443,38 @@ footer {
     margin: auto;
 
   }
+
+  .map {
+    padding: 1px !important;
+  }
+
+  .map-img {
+    background-image: url("https://images.prismic.io/canalstreetmarket/74921c6bf0abf767666c52a6af3c001c58643587_group-11.jpg?auto=compress,format");
+    height: 100%
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px
+  }
+
+  .footer_end {
+    flex-wrap: unset;
+  }
+
+  .footer_end>* {
+    font-size: 14px;
+    text-align: unset !important;
+
+  }
+
+  .footer_end p:last-child {
+    order: -1
+  }
+
+  .footer_end p:first-of-type {
+    text-align: end !important;
+  }
+
 }

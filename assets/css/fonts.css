@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'ogg';
+    src: url('../fonts/Ogg-Roman.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Apercu_mono';
+    src: url('..fonts/apercu-mono.ttf');
+}
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('..fonts/Apercu_Regular.otf');
+}
