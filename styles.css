@@ -2,12 +2,17 @@
   --clr-blue: #5ea3ec;
   --clr-red: #f64444;
   --clr-orange: #ffb400;
-  --mobile-inline-padding: 60px;
+  --inline-padding: 30px;
   --ff-ogg: ogg, sans-serif;
   --ff-Apercu-mono: Apercu_mono, sans-serif;
   --ff-Apercu: Apercu;
 }
 
+@media screen and (min-width: 768px) {
+  :root {
+    --inline-padding: 60px
+  }
+}
 
 
 body,
@@ -49,7 +54,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: var(--mobile-inline-padding)
+  padding-inline: var(--inline-padding)
 }
 
 .nav-desktop {
@@ -102,7 +107,7 @@ header {
 }
 
 .hero {
-  padding-inline: var(--mobile-inline-padding);
+  padding-inline: var(--inline-padding);
   margin-top: 300px;
   margin-bottom: 50px;
 }
@@ -143,7 +148,7 @@ header {
 }
 
 .sub_section_one {
-  padding-inline: var(--mobile-inline-padding);
+  padding-inline: var(--inline-padding);
   line-height: 60px;
 }
 
@@ -167,7 +172,7 @@ header {
 }
 
 section.two {
-  padding-inline: var(--mobile-inline-padding);
+  padding-inline: var(--inline-padding);
 }
 
 .market_events img {
@@ -235,7 +240,7 @@ section.two {
 }
 
 .address {
-  padding-inline: var(--mobile-inline-padding);
+  padding-inline: var(--inline-padding);
 }
 
 .address a {
@@ -330,7 +335,7 @@ footer {
 }
 
 footer {
-  padding-inline: var(--mobile-inline-padding);
+  padding-inline: var(--inline-padding);
 }
 
 .footer_end {
